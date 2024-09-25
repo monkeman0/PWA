@@ -10,21 +10,16 @@
 </head>
 <body>
     <script>
-        var inputId
-        var win;
-        var iframe;
         window.focus();
-        inputId = "https://kirka.io"
-        win = window.open();
-        win.document.body.style.margin = '0';
-        win.document.body.style.height = '100vh';
-        iframe = win.document.createElement('iframe');
+        document.body.style.margin = '0';
+        document.body.style.height = '100vh';
+        iframe = document.createElement('iframe');
         iframe.style.border = 'none';
         iframe.style.width = '100%';
         iframe.style.height = '100%';
         iframe.style.margin = '0';
-        iframe.src = inputId;
-        win.document.body.appendChild(iframe);
+        iframe.src = 'https://kirka.io';
+        document.body.appendChild(iframe);
         
     </script>
 </body>
