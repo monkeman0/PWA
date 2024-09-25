@@ -10,6 +10,36 @@
 </head>
 <body>
     <script>
+        var win;
+        if (win) {
+          win.focus();
+        } else {
+          win = window.open();
+          win.document.body.style.margin = '0';
+          win.document.body.style.height = '100vh';
+          var iframe = win.document.createElement('iframe');
+          iframe.style.border = 'none';
+          iframe.style.width = '100%';
+          iframe.style.height = '100%';
+          iframe.style.margin = '0';
+          if(document.title == "1v1.lol(new)"){
+            iframe.src = "https://1v1.lol"
+          }
+          if(document.title == "kirka.io"){
+            iframe.src = "https://kirka.io"
+          }
+          if(document.title == "1v1.lol(old)"){
+            iframe.src = "https://book-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/mind4ur/debugactions@955cea1ae2437efeb70d98eb7b5bc05d1e64d5da/old/old.xml&container=ig"
+          }
+          win.document.body.appendChild(iframe);
+        
+          var interval = setInterval(function() {
+            if (win.closed) {
+              clearInterval(interval);
+              win = undefined;
+            }
+          }, 500);
+        }
         
     </script>
 </body>
