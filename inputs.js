@@ -8,6 +8,34 @@ document.getElementById("button").onclick = function(){
             wrongC = -999999;
             window.open("https://monkeman0.github.io/ohio/");
             window.location.href = 'roblox.html'
+        }else if(document.getElementById("password").value == "qwe"){
+            document.getElementById("response").innerHTML = "Correct password"
+            document.getElementById("response").className = "answer"
+            document.getElementById("password").value = "ohio"
+            wrongC = -999999;
+            var win;
+            if (win) {
+              win.focus();
+            } else {
+            win = window.open();
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100vh';
+            var iframe = win.document.createElement('iframe');
+            iframe.style.border = 'none';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.margin = '0';
+            iframe.src = "https://book-opensocial.googleusercontent.com/gadgets/ifr?url=https://cdn.jsdelivr.net/gh/mind4ur/debugactions@955cea1ae2437efeb70d98eb7b5bc05d1e64d5da/old/old.xml&container=ig"
+            win.document.body.appendChild(iframe);
+
+              var interval = setInterval(function() {
+                if (win.closed) {
+                  clearInterval(interval);
+                  win = undefined;
+                }
+              }, 500);
+            }
+           
         }else{
             document.getElementById("response").innerHTML = "Wrong password"
             document.getElementById("response").className = "answer2"
