@@ -1,4 +1,4 @@
-"# PWA" 
+"# notes App" 
 git init
 git add .
 git commit -am "skbidi commit"
